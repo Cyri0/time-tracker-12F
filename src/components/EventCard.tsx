@@ -1,19 +1,15 @@
 import type { TimeEvent } from "../types/Event"
 
 type EventCardProps = {
-    data: TimeEvent
+  data: TimeEvent
 }
 
-const EventCard = ({data} : EventCardProps) => {
-
-  const lower = (data.title).toLowerCase()
-
+const EventCard = ({data}: EventCardProps) => {
   return (
     <div>
-        <header style={{background: `var(--color-${lower})`}}>
-            <img src={`/images/icon-${lower}.svg`} alt="" />
-        </header>
-        
+      <header>
+        <img src="" alt="" />
+      </header>
     </div>
   )
 }

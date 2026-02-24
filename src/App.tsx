@@ -3,18 +3,19 @@ import { getData } from "./services/service"
 import type { TimeEvent } from "./types/Event"
 import EventCard from "./components/EventCard"
 
-function App() {
-  const [events, setEvents] = useState<TimeEvent[]>([])
+const App = () => {
+  const [data, setData] = useState<TimeEvent[]>([])
 
-  useEffect(()=>{    
-    getData().then(res => setEvents(res))
+  useEffect(()=>{
+    setTimeout(()=>{
+      getData().then(data => setData(data))
+    },2000)
   },[])
 
   return (
-    <>
-    <h1>Hello</h1>
-    {events.map(e => <EventCard data={e} />)}
-    </>
+    <div>
+      {data.map(temp => <EventCard data={temp} />)}
+    </div>
   )
 }
 
