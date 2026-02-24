@@ -5,10 +5,12 @@ type EventCardProps = {
 }
 
 const EventCard = ({data}: EventCardProps) => {
+  const small = data.title.toLowerCase().replaceAll(" ", "-")
+
   return (
     <div>
-      <header>
-        <img src="" alt="" />
+      <header style={{ background: `var(--color-${small})` }}>
+        <img src={`/images/icon-${small}.svg`} alt={data.title} />
       </header>
     </div>
   )
