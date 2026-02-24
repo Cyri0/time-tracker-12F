@@ -15,3 +15,5 @@ export type TimeEvent = {
         }
     }
 }
+
+export type TimeFramesType = "daily" | "weekly" | "monthly"
